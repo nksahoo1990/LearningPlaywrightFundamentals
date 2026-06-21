@@ -6,6 +6,15 @@ A learning project for understanding and mastering Playwright, a modern end-to-e
 
 This repository contains example tests and configurations for learning Playwright fundamentals. It demonstrates basic test automation concepts including browser automation, assertions, and test configuration.
 
+## Page Object Model Example
+
+The `PageObjectModel_TTA_Cart` folder contains a sample end-to-end test using the Page Object Model pattern for a TTA shopping cart application. It includes:
+- `PageObjectModel_TTA_Cart/pages/TTACartLoginPage.ts`
+- `PageObjectModel_TTA_Cart/pages/TTACartInventoryPage.ts`
+- `PageObjectModel_TTA_Cart/pages/TTACartCHeckoutPage.ts`
+- `PageObjectModel_TTA_Cart/tests/ttaCart-E2E.spec.ts`
+- `PageObjectModel_TTA_Cart/.env` for sample login credentials
+
 ## What is Playwright?
 
 Playwright is a testing and automation library that allows you to:
@@ -18,8 +27,12 @@ Playwright is a testing and automation library that allows you to:
 
 ```
 .
-├── tests/
-│   └── example.spec.ts          # Sample test files demonstrating Playwright basics
+├── PageObjectModel_TTA_Cart/     # Page object model sample for the TTA shopping cart app
+│   ├── .env                     # Environment variables for sample login credentials
+│   ├── pages/                   # Reusable page objects for login, inventory, and checkout
+│   └── tests/                   # End-to-end Playwright test for the TTA cart flow
+├── tests/                       # Additional example Playwright tests
+│   └── example.spec.ts
 ├── playwright.config.ts         # Playwright configuration and test settings
 ├── package.json                 # Project dependencies and metadata
 └── README.md                    # This file
@@ -58,6 +71,11 @@ npx playwright test
 Run tests in a specific file:
 ```bash
 npx playwright test tests/example.spec.ts
+```
+
+Run the TTA cart Page Object Model test:
+```bash
+npx playwright test PageObjectModel_TTA_Cart/tests/ttaCart-E2E.spec.ts
 ```
 
 Run tests in debug mode:
