@@ -25,7 +25,8 @@ export default defineConfig({
   //workers: 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: [['html'], ["allure-playwright"], ['./CustomTTAReporter.ts']], 
-  reporter: [['html'], ['./CustomTTAReporter.ts']],
+  reporter: [['html']],
+  //reporter: [['html'], ['./CustomTTAReporter.ts']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */

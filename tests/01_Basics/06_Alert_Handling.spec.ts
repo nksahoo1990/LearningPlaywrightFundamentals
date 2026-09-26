@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Verification of number of links', async ({ page }) => {
+test('Verification of nhandling of alerts', async ({ page }) => {
     await page.goto('https://testautomationpractice.blogspot.com/');
 
 
@@ -8,8 +8,14 @@ test('Verification of number of links', async ({ page }) => {
         // expect(dialog.type()).toContain("alert");
         //expect(dialog.message()).toContain("I am an alert box!");
         console.log(dialog.message());
-        await dialog.accept();
+        console.log(dialog.type());
+        //await dialog.accept();
+        //await dialog.dismiss();
+        await dialog.accept("Nitya Krushna Sahoo");
     });
-    await page.locator("//button[@id='alertBtn']").click();
+    //await page.locator("//button[@id='alertBtn']").click();
+    //await page.locator('#confirmBtn').click();
+    await page.locator('#promptBtn').click();
+
 });
 
