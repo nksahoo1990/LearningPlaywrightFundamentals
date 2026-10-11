@@ -8,7 +8,6 @@ test.describe('Web Table Tests', () => {
         const row = page.locator("//table[@id='customers']/tbody/tr", { hasText: 'Helen Bennett' });
         const country = await row.locator('td').nth(2).textContent();
         console.log(`Helen Bennett is living in : ${country}`);
-
     })
 
     test('Verify all the texts present in a web table.', async ({ page }) => {
@@ -21,10 +20,5 @@ test.describe('Web Table Tests', () => {
             const rowText = await tableRow.nth(i).allInnerTexts();
             console.log(`Row ${i + 1} text: ${rowText}`);
         }
-
-
-
     })
-
-
 });

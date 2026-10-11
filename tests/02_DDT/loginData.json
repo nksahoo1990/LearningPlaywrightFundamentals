@@ -1,0 +1,17 @@
+[
+    {
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "expectedTitle": "Swag Labs"
+    },
+    {
+        "username": "locked_user",
+        "password": "secret_sauce",
+        "expectedTitle": "Swag Labs"
+    },
+    {
+        "username": "visual_user",
+        "password": "secret_sauce",
+        "expectedTitle": "Swag Labs"
+    }
+]
